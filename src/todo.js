@@ -1,4 +1,4 @@
-import "./css/todo.css";
+
 const todo = document.querySelector(".d1_u"),
   doing = document.querySelector(".d2_u"),
   done = document.querySelector(".d3_u"),

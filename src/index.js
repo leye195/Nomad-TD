@@ -1,5 +1,4 @@
-import "./css/styles.css";
-import "./css/bg.css";
+
 const js_clock = document.querySelector(".js_clock"),
   dat = document.querySelector(".date"),
   change = document.querySelector(".change"),
