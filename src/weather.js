@@ -1,4 +1,3 @@
-
 const API_KEY = "5190672c2133015e104260d0bbaf055d";
 function getWeather(lat, lon) {
   fetch(
