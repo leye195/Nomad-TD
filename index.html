@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <header class="menu">
+      <p>TD</p>
+      <div class="change">
+        Edit Name
+      </div>
+    </header>
+    <div class="container">
+      <h5 class="date">Mon</h5>
+      <h2 class="user_name"></h2>
+      <h2 class="js_clock"></h2>
+      <div class="weather"></div>
+      <div class="todo_input">
+        <input
+          class="todo_in"
+          type="text"
+          placeholder="What's your plan today?"
+        />
+      </div>
+      <div class="list"></div>
+      <div class="todo_list">
+        <div class="item todo">
+          <h4>Todo</h4>
+          <div class="d1">
+            <ul class="d1_u"></ul>
+          </div>
+        </div>
+        <div class="item doing">
+          <h4>Doing</h4>
+          <div class="d2">
+            <ul class="d2_u"></ul>
+          </div>
+        </div>
+        <div class="item done">
+          <h4>Done</h4>
+          <div class="d3">
+            <ul class="d3_u"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="user_modal">
+      <div class="user_wrapper">
+        <div class="close">X</div>
+        <p>Welcome Stranger!!</p>
+        <input
+          class="js_input"
+          type="name"
+          placeholder="Type your name"
+        /><br />
+        <button class="js_confirm">Confirm</button>
+      </div>
+    </div>
+    <script src="src/todo.js"></script>
+    <script src="src/weather.js"></script>
+    <script src="src/index.js"></script>
+  </body>
+</html>
