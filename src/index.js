@@ -23,6 +23,7 @@ function getTime() {
     ch = "PM";
     if(h>=12 && h<18){
       greeting = "Good Afternoon🤗 ";
+      
       console.log(greeting);
     }else if(h>=18){
       greeting = "Good Night☾ ";
@@ -36,7 +37,7 @@ function getTime() {
   } ${ch}`;
   js_clock.innerHTML = clock;
   dat.innerHTML = `${day},${M} ${D},${Y}`;
-  loadUser();
+  user.innerHTML = `${greeting}`;
 }
 function randomizeImage() {
   const body = document.querySelector("body"),
@@ -79,14 +80,14 @@ function loadUser() {
   if (!u) {
     user_modal.style.display = "block";
   } else {
-    user.innerHTML = `${greeting} ${u}!!!`;
+    user.innerHTML+= ` ${u}!!!`;
     user_modal.style.display = "none";
   }
 }
 function init() {
   setInterval(getTime, 1000);
   randomizeImage();
-  //loadUser();
+  loadUser();
   js_input.addEventListener("change", handleInput);
   js_confirm.addEventListener("click", handleConfirm);
   change.addEventListener("click", handleChange);
