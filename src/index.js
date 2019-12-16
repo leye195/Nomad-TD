@@ -24,7 +24,6 @@ function getTime() {
     ch = "PM";
     if(h>=12 && h<18){
       greeting = "Good Afternoon🤗 ";
-      console.log(greeting);
     }else if(h>=18){
       greeting = "Good Night☾ ";
     }
