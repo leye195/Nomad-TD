@@ -78,6 +78,9 @@ header .change {
   color: white;
   cursor: pointer;
 }
+.user_wrapper .close:hover{
+  color:#7b7b7b99;
+}
 .user_wrapper p {
   margin-bottom: 30px;
   font-weight: 800;
