@@ -36,7 +36,7 @@ function getTime() {
   } ${ch}`;
   js_clock.innerHTML = clock;
   dat.innerHTML = `${day},${M} ${D},${Y}`;
-  s[0].innerText = `${greeting}`;
+  s[0].innerText = ` ${greeting}`;
 }
 function randomizeImage() {
   const body = document.querySelector("body"),
