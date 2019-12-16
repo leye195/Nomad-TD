@@ -36,6 +36,7 @@ function getTime() {
   } ${ch}`;
   js_clock.innerHTML = clock;
   dat.innerHTML = `${day},${M} ${D},${Y}`;
+  loadUser();
 }
 function randomizeImage() {
   const body = document.querySelector("body"),
@@ -85,7 +86,7 @@ function loadUser() {
 function init() {
   setInterval(getTime, 1000);
   randomizeImage();
-  loadUser();
+  //loadUser();
   js_input.addEventListener("change", handleInput);
   js_confirm.addEventListener("click", handleConfirm);
   change.addEventListener("click", handleChange);
