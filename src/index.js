@@ -21,10 +21,13 @@ function getTime() {
     day = days[now.getDay()];
   if (h >= 12) {
     ch = "PM";
-    if(h>=12 && h<18)
+    if(h>=12 && h<18){
       greeting = "Good Afternoon🤗 ";
-    else
+      console.log(greeting);
+    }
+    else{
       greeting = "Good Night☾ ";
+    }
   } else {
     ch = "AM";
     greeting = "Good Morning☀ ";

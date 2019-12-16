@@ -10,13 +10,11 @@ function getWeather(lat, lon) {
       const { main, name, weather, sys } = data;
       console.log(data);
       const temp = document.querySelector(".weather");
-      //const span = document.createElement("span");
       temp.innerHTML = `Weather in ${name}(${
         sys.country
       }) <img class="w_img" src="https://openweathermap.org/img/wn/${
         weather[0].icon
       }@2x.png"/> ${main.temp}°C`;
-      //temp.appendChild(span);
     });
 }
 function loadCoords() {
