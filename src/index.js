@@ -19,7 +19,7 @@ function getTime() {
     m = now.getMinutes(),
     s = now.getSeconds(),
     day = days[now.getDay()];
-  if (h > 12) {
+  if (h >= 12) {
     ch = "PM";
     if(h>=12 && h<18)
       greeting = "Good Afternoon🤗 ";
