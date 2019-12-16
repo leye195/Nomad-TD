@@ -5,7 +5,8 @@ const js_clock = document.querySelector(".js_clock"),
   user_modal = document.querySelector(".user_modal"),
   js_input = document.querySelector(".js_input"),
   close = document.querySelector(".close"),
-  s=document.querySelectorAll("span"),
+  s1=document.querySelector(".s1"),
+  s2=document.querySelector(".s2"),
   js_confirm = document.querySelector(".js_confirm");
 const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let ch = "AM",
@@ -36,7 +37,7 @@ function getTime() {
   } ${ch}`;
   js_clock.innerHTML = clock;
   dat.innerHTML = `${day},${M} ${D},${Y}`;
-  s[0].innerText = ` ${greeting}`;
+  s1.innerText = ` ${greeting}`;
 }
 function randomizeImage() {
   const body = document.querySelector("body"),
@@ -57,7 +58,7 @@ function handleInput(e) {
   const n = e.target.value;
   if (n !== "") {
     saveUser(n);
-    s[1].innerText = ` ${n}!!!`;
+    s2.innerText = ` ${n}!!!`;
     user_modal.style.display = "none";
     e.target.value = "";
   }
@@ -67,7 +68,7 @@ function handleConfirm() {
   if (n !== "") {
     saveUser(n);
     user_modal.style.display = "none";
-    s[1].innerText = ` ${n}!!!`;
+    s2.innerText = ` ${n}!!!`;
     js_input.value = "";
   }
 }
@@ -79,7 +80,7 @@ function loadUser() {
   if (!u) {
     user_modal.style.display = "block";
   } else {
-    s[1].innerText+= ` ${u}!!!`;
+    s2.innerText+= ` ${u}!!!`;
     user_modal.style.display = "none";
   }
 }
