@@ -5,6 +5,7 @@ const js_clock = document.querySelector(".js_clock"),
   user_modal = document.querySelector(".user_modal"),
   js_input = document.querySelector(".js_input"),
   close = document.querySelector(".close"),
+  s=document.querySelectorAll(".username span");
   js_confirm = document.querySelector(".js_confirm");
 const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let ch = "AM",
@@ -23,7 +24,6 @@ function getTime() {
     ch = "PM";
     if(h>=12 && h<18){
       greeting = "Good Afternoon🤗 ";
-      
       console.log(greeting);
     }else if(h>=18){
       greeting = "Good Night☾ ";
@@ -37,7 +37,7 @@ function getTime() {
   } ${ch}`;
   js_clock.innerHTML = clock;
   dat.innerHTML = `${day},${M} ${D},${Y}`;
-  user.innerHTML = `${greeting}`;
+  s[0].innerHTML = `${greeting}`;
 }
 function randomizeImage() {
   const body = document.querySelector("body"),
@@ -58,7 +58,7 @@ function handleInput(e) {
   const n = e.target.value;
   if (n !== "") {
     saveUser(n);
-    user.innerHTML = `${greeting} ${n}!!!`;
+    s[1].innerHTML = ` ${n}!!!`;
     user_modal.style.display = "none";
     e.target.value = "";
   }
@@ -68,7 +68,7 @@ function handleConfirm() {
   if (n !== "") {
     saveUser(n);
     user_modal.style.display = "none";
-    user.innerHTML = `${greeting} ${n}!!!`;
+    s[1].innerHTML = ` ${n}!!!`;
     js_input.value = "";
   }
 }
@@ -80,7 +80,7 @@ function loadUser() {
   if (!u) {
     user_modal.style.display = "block";
   } else {
-    user.innerHTML+= ` ${u}!!!`;
+    s[1].innerHTML+= ` ${u}!!!`;
     user_modal.style.display = "none";
   }
 }
