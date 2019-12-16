@@ -37,7 +37,7 @@ function getTime() {
   } ${ch}`;
   js_clock.innerHTML = clock;
   dat.innerHTML = `${day},${M} ${D},${Y}`;
-  s[0].innerHTML = `${greeting}`;
+  s[0].innerText = `${greeting}`;
 }
 function randomizeImage() {
   const body = document.querySelector("body"),
@@ -58,7 +58,7 @@ function handleInput(e) {
   const n = e.target.value;
   if (n !== "") {
     saveUser(n);
-    s[1].innerHTML = ` ${n}!!!`;
+    s[1].innerText = ` ${n}!!!`;
     user_modal.style.display = "none";
     e.target.value = "";
   }
@@ -68,7 +68,7 @@ function handleConfirm() {
   if (n !== "") {
     saveUser(n);
     user_modal.style.display = "none";
-    s[1].innerHTML = ` ${n}!!!`;
+    s[1].innerText = ` ${n}!!!`;
     js_input.value = "";
   }
 }
@@ -80,7 +80,7 @@ function loadUser() {
   if (!u) {
     user_modal.style.display = "block";
   } else {
-    s[1].innerHTML+= ` ${u}!!!`;
+    s[1].innerText+= ` ${u}!!!`;
     user_modal.style.display = "none";
   }
 }
